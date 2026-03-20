@@ -1,29 +1,20 @@
 project:
   type: website
   output-dir: docs
-  
+  render:
+    - index.qmd
+  resources:
+    - CNAME
+
 website:
-  title: "OTTR Template Website"
-  navbar:
-    left:
-    - text: ""
-      href: index.qmd
-      icon: fa-home
-    - text: 1. Setup
-      href: setup.qmd
-    - text: 2. Hosting
-      href: hosting.qmd
-    - text: Editing
-      href: editing.qmd
-    - text: 3. Style
-      href: style.qmd
-    - text: 4. Git Actions
-      href: git_actions.qmd
-    - text: More ottr docs
-      href: https://www.ottrproject.org/
+  title: "Candy's Comedy"
+  site-url: https://candyscomedy.com
+  navbar: false
 
 format:
   html:
-    theme: cosmo
+    theme: none
     css: styles.css
-    toc: true
+    toc: false
+    title-block: false
+    include-in-header: resources/fonts.html
