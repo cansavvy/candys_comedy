@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html-435ba6093e6f0817aa7405139811e7b1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-html-734cb40618f438257b19a1e532635a32.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1L41WTF950"></script>
 
 <script type="text/javascript">
@@ -89,7 +89,7 @@ Standup comedian in Baltimore
 </div>
 </div>
 <div class="about-bio">
-<p>Candy is a standup comedian based in Baltimore whose work is personal, random, and always a little unhinged. She’s performed everywhere from open mics to funerals to preschool talent shows — and whether you’re 4 or 40, grieving or celebrating, she’ll find a way to make you laugh. Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.</p>
+<p>Candy is a standup comedian based in Baltimore whose work is personal, random, and always a little unhinged. She’s performed everywhere from open mics to funerals and her therapy appointments — and whether you’re 4 or 40, she’ll find a way to make you laugh. Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.</p>
 <p>Find her online as <strong><span class="citation" data-cites="candys_comedy">@candys_comedy</span></strong>. She posts something new everyday, often featuring her dog, Eevee.</p>
 <p class="connect-lead">
 Shows, collabs, or cat videos—say hi.
@@ -160,13 +160,14 @@ Shows, collabs, or cat videos—say hi.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
