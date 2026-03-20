@@ -5,6 +5,10 @@ project:
     - index.qmd
   resources:
     - CNAME
+    - favicon.ico
+    - favicon.svg
+    - resources/images/favicon.svg
+    - resources/images/favicon.ico
 
 website:
   title: "Candy's Comedy"

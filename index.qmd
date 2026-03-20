@@ -9,7 +9,7 @@ format:
 <div class="hero-inner">
 <div class="hero-text">
 <h1 class="title-3d">Candy's Comedy</h1>
-<p class="hero-tagline">Standup comedian in Baltimore and beyond</p>
+<p class="hero-tagline">Standup comedian in Baltimore</p>
 </div>
 </div>
 :::
