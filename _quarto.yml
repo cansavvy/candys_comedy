@@ -10,6 +10,7 @@ website:
   title: "Candy's Comedy"
   site-url: https://candyscomedy.com
   navbar: false
+  google-analytics: "G-1L41WTF950"
 
 format:
   html:
