@@ -29,6 +29,12 @@ knitr::include_graphics("resources/images/profile.png")
 
 Candy is a standup comedian based in Baltimore whose work is personal, random, and always a little unhinged. She's performed everywhere from open mics to funerals to preschool talent shows — and whether you're 4 or 40, grieving or celebrating, she'll find a way to make you laugh. Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.
 
+## Reviews
+
+"Her therapy appointments always make me laugh" -- Candy's therapist 
+
+"Out of my two kids, she's definitely top two" - Candy's Mom 
+
 Find her online as **@candys_comedy**. She posts something new everyday, often featuring her dog, Eevee. 
 
 <p class="connect-lead">Shows, collabs, or cat videos—say hi.</p>
@@ -49,3 +55,123 @@ Find her online as **@candys_comedy**. She posts something new everyday, often f
 
 :::
 
+::: {#social .social-feed-section}
+## Watch & Follow
+
+```{=html}
+<style>
+  .tab-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid currentColor;
+    background: transparent;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .tab-btn.active-tt {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+  }
+
+  .tab-btn.active-yt {
+    background: #ff0000;
+    color: #fff;
+    border-color: #ff0000;
+  }
+
+  .tab-btn:not(.active-tt):not(.active-yt) {
+    color: #555;
+    border-color: #ccc;
+  }
+
+  .tab-btn:not(.active-tt):not(.active-yt):hover {
+    background: #f5f5f5;
+  }
+
+  .tab-panel {
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .tab-panel.active {
+    display: flex;
+  }
+
+  .yt-embed-wrapper {
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .yt-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+  }
+
+  .tt-embed-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<div class="tab-buttons">
+  <button class="tab-btn active-tt" onclick="showTab('tiktok', this)">🎵 TikTok</button>
+  <button class="tab-btn" onclick="showTab('youtube', this)">▶ YouTube</button>
+</div>
+
+<div id="tab-tiktok" class="tab-panel active">
+  <div class="tt-embed-wrapper">
+    <blockquote
+      class="tiktok-embed"
+      cite="https://www.tiktok.com/@candys_comedy/video/7631940206890913037"
+      data-video-id="7631940206890913037"
+      style="max-width: 605px; min-width: 325px;">
+      <section>
+        <a target="_blank" href="https://www.tiktok.com/@candys_comedy">@candys_comedy</a>
+      </section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+  </div>
+</div>
+
+<div id="tab-youtube" class="tab-panel">
+  <div class="yt-embed-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed?listType=user_uploads&list=candys_comedy&rel=0"
+      title="Candy's Comedy YouTube channel"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<script>
+  function showTab(tab, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active-tt', 'active-yt');
+    });
+
+    document.getElementById('tab-' + tab).classList.add('active');
+
+    if (tab === 'tiktok') btn.classList.add('active-tt');
+    if (tab === 'youtube') btn.classList.add('active-yt');
+  }
+</script>
+```
+
+:::
