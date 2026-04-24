@@ -27,7 +27,7 @@ knitr::include_graphics("resources/images/profile.png")
 
 <div class="about-bio">
 
-Candy is a standup comedian based in Baltimore whose work is personal, random, and always a little unhinged. She's performed everywhere from open mics to funerals to preschool talent shows — and whether you're 4 or 40, grieving or celebrating, she'll find a way to make you laugh. Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.
+Candy is a standup comedian based in Baltimore whose work is personal, random, and always a little unhinged. She's performed everywhere from open mics to funerals and her therapy appointments — and whether you're 4 or 40, she'll find a way to make you laugh. Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.
 
 ## Reviews
 
