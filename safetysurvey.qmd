@@ -1,0 +1,15 @@
+---
+title: "Safety Survey"
+format:
+  html:
+    title-block: false
+    toc: false
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=https://forms.gle/TUAaYg4oavr8GP4y6">
+        <link rel="canonical" href="https://forms.gle/TUAaYg4oavr8GP4y6">
+---
+
+Redirecting you to the safety survey...
+
+If you're not redirected automatically, [click here to open the survey](https://forms.gle/TUAaYg4oavr8GP4y6).

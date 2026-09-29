@@ -3,12 +3,14 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - safetysurvey.qmd
   resources:
     - CNAME
     - favicon.ico
     - favicon.svg
     - resources/images/favicon.svg
     - resources/images/favicon.ico
+    - styles.css
 
 website:
   title: "Candy's Comedy"
