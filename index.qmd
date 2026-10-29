@@ -27,21 +27,29 @@ knitr::include_graphics("resources/images/profile.png")
 
 <div class="about-bio">
 
-Candy is a standup comedian based in Baltimore whose work is personal, random, and always a little unhinged. She's performed everywhere from open mics to funerals and her therapy appointments — and whether you're 4 or 40, she'll find a way to make you laugh. Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.
+Personal, random, and always a little unhinged, Candy seems super sweet until she starts talking. Candy’s an enthusiastic dork. If she was your mom, you’d be embarrassed.
 
-## Reviews
+Her humor tackles parenting chaos, marriage, and growing up in the Midwest, all delivered with the unearned confidence of a dorky mom who has absolutely no business being this enthusiastic about it.
 
 "Her therapy appointments always make me laugh" -- Candy's therapist 
 
-"Out of my two kids, she's definitely in the top two" - Candy's Mom 
+Candy wants to promote local comedy. She believes comedy is powerful but not serious. 
 
-"Out of my two parents, she's definitely in the top two" -- Eevee, Candy's dog.
+She's also literally annoyingly pie in the sky and thinks in person comedy may be the cure to us all descending into madness as we talk to robots pretending to be human instead of actual human beings. 
+
+## Baltimore Comedy
+
+Candy is also the founder of [**BaltimoreComedy.org**](https://baltimorecomedy.org) because she's a huge fan of the local comedians in the scene and wants to support them. She has big plans for BaltimoreComedy.org because she's an idealist and secretly cut-throat ambitious but in a kind way. 
+
+## Writing
+
+Candy also writes about comedy and anything else she's overthinking. [Read it on Substack](https://substack.com/@candyscomedy/posts).
 
 ## How to find her 
 
-Find her online as **@candys_comedy**. She posts something new everyday because its now a compulsion.  
+Find her online as **@candys_comedy**. She posts something new everyday unless her kids puked on her.  
 
-<p class="connect-lead">Shows, collabs, or cat videos—say hi.</p>
+<p class="connect-lead">Shows, collabs, or racoon videos—say hi.</p>
 
 <p><a class="email-link" href="mailto:candyscomedybaltimore@gmail.com">candyscomedybaltimore@gmail.com</a></p>
 
@@ -50,6 +58,7 @@ Find her online as **@candys_comedy**. She posts something new everyday because 
 <a class="social-btn social-ig" href="https://www.instagram.com/candys_comedy/" target="_blank" rel="noopener noreferrer">Instagram</a>
 <a class="social-btn social-fb" href="https://www.facebook.com/candyscomedy" target="_blank" rel="noopener noreferrer">Facebook</a>
 <a class="social-btn social-tt" href="https://www.tiktok.com/@candys_comedy" target="_blank" rel="noopener noreferrer">TikTok</a>
+<a class="social-btn social-ss" href="https://substack.com/@candyscomedy/posts" target="_blank" rel="noopener noreferrer">Substack</a>
 </div>
 
 
@@ -94,12 +103,18 @@ Find her online as **@candys_comedy**. She posts something new everyday because 
     border-color: #ff0000;
   }
 
-  .tab-btn:not(.active-tt):not(.active-yt) {
+  .tab-btn.active-ig {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+    border-color: #dc2743;
+  }
+
+  .tab-btn:not(.active-tt):not(.active-yt):not(.active-ig) {
     color: #555;
     border-color: #ccc;
   }
 
-  .tab-btn:not(.active-tt):not(.active-yt):hover {
+  .tab-btn:not(.active-tt):not(.active-yt):not(.active-ig):hover {
     background: #f5f5f5;
   }
 
@@ -130,14 +145,39 @@ Find her online as **@candys_comedy**. She posts something new everyday because 
     display: flex;
     justify-content: center;
   }
+
+  .ig-embed-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ig-embed-wrapper .instagram-media {
+    max-width: 540px !important;
+    min-width: 326px !important;
+    width: 100% !important;
+  }
 </style>
 
 <div class="tab-buttons">
-  <button class="tab-btn active-tt" onclick="showTab('tiktok', this)">🎵 TikTok</button>
+  <button class="tab-btn active-ig" onclick="showTab('instagram', this)">⭐ Featured</button>
+  <button class="tab-btn" onclick="showTab('tiktok', this)">🎵 TikTok</button>
   <button class="tab-btn" onclick="showTab('youtube', this)">▶ YouTube</button>
 </div>
 
-<div id="tab-tiktok" class="tab-panel active">
+<div id="tab-instagram" class="tab-panel active">
+  <div class="ig-embed-wrapper">
+    <blockquote
+      class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/p/Dd6Y2HuFr4b/?utm_source=ig_embed&amp;utm_campaign=loading"
+      data-instgrm-version="14">
+      <a href="https://www.instagram.com/p/Dd6Y2HuFr4b/" target="_blank" rel="noopener noreferrer">View this post on Instagram</a>
+    </blockquote>
+    <script async src="https://www.instagram.com/embed.js"></script>
+  </div>
+</div>
+
+<div id="tab-tiktok" class="tab-panel">
   <div class="tt-embed-wrapper">
     <blockquote
       class="tiktok-embed"
@@ -167,13 +207,17 @@ Find her online as **@candys_comedy**. She posts something new everyday because 
   function showTab(tab, btn) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => {
-      b.classList.remove('active-tt', 'active-yt');
+      b.classList.remove('active-tt', 'active-yt', 'active-ig');
     });
 
     document.getElementById('tab-' + tab).classList.add('active');
 
     if (tab === 'tiktok') btn.classList.add('active-tt');
     if (tab === 'youtube') btn.classList.add('active-yt');
+    if (tab === 'instagram') {
+      btn.classList.add('active-ig');
+      if (window.instgrm) window.instgrm.Embeds.process();
+    }
   }
 </script>
 ```
